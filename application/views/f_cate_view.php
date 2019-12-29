@@ -568,7 +568,7 @@
 			// 	removePlugins: 'toolbar'
 			// } );
 			$(document).ready(function(){
-				alert('sdfsdfds');
+				alert('sdfsdfdssf');
 				$(".dropdown").hover(            
 					function() {
 						$('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideDown("400");
