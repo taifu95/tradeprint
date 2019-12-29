@@ -1,0 +1,9 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/php:5.6.40-zts-stretch
+    steps:
+      - checkout
+      - run: sudo composer self-update
+      - run: composer install
