@@ -9,12 +9,22 @@ class Checkout extends CI_Controller {
         $this->load->model('trade_m');
         // $this->load->library('session');
     }
-    public function index(){
+    // public function index(){
+    //     $data = array();
+    //     $data["category"] = $this->trade_m->get_category();
+    //     $data["menu"] = $this->trade_m->get_cat_menu();
+    //     $data["color"] = $this->trade_m->get_color();
+    //     $this->load->view("include/header",$data);
+    //     $this->load->view("checkout",$data);
+    // }
+
+    function index(){
         $data = array();
-        $data["category"] = $this->trade_m->get_category();
-        $data["menu"] = $this->trade_m->get_cat_menu();
-        $data["color"] = $this->trade_m->get_color();
-        $this->load->view("include/header",$data);
-        $this->load->view("checkout",$data);
+        $data['category'] = $this->trade_m->get_category();
+        $data['menu'] = $this->trade_m->get_cat_menu();
+        $data['color'] = $this->trade_m->get_color();
+
+        $this->load->view("include/header", $data);
+        $this->load->view("checkout/basket.php",$data);
     }
 }
