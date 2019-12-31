@@ -687,9 +687,9 @@
     <script type="text/javascript" src="<?php echo base_url()?>assets/front/js/theme.js"></script>
     <script src="<?php echo base_url()?>assets/mine/search.js"></script>	
 	<script src="https://js.stripe.com/v3/"></script>
-	<script
-    src="https://www.paypal.com/sdk/js?client-id=sb"> // Required. Replace SB_CLIENT_ID with your sandbox client ID.
-  </script>
+	<script src="https://www.paypal.com/sdk/js?client-id=sb"></script> 
+    <!-- // Required. Replace SB_CLIENT_ID with your sandbox client ID. -->
+  
 	<script>
 		function reportWindowSize() {
 
