@@ -3,6 +3,9 @@
 <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/mine/bootstrap-css-wizard.css">
 <!-- Bootstrap & CSS form Wizard Stylesheet -->
 <link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/mine/checkout.css">
+<style>
+
+</style>
 <main class="main">
 	<div class="container">
 		<div class="tabbable">
@@ -65,7 +68,7 @@
 			</div>
 			<div class="col-sm-12 col-md-6 col-lg-4">
 				<div class="row">
-					<div class="col-md-12 text-center" style="margin-top: 25px">
+					<div class="col-md-12 text-center" style="padding-top: 1.5rem; padding-bottom: 1.5rem">
 						<a class="checkout-link-tag" href="#" style="font-size: 18px; text-transform: uppercase;">Continue Shopping</a>
 					</div>
 					<div class="col-md-12">
@@ -82,6 +85,7 @@
 									<div class="col-xs-6">TOTAL</div>
 									<div class="col-xs-6"><h4 class="main-price">&pound;46.42</h4></div>
 								</div>
+                                <div class="divider-custom"></div>
 								<div class="row">
 									<div class="col-md-12">
 										<button class="btn btn-danger btn-danger-full btn-checkout">CHECKOUT</button>

@@ -4,6 +4,59 @@
 <!-- Bootstrap & CSS form Wizard Stylesheet -->
 <link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/mine/checkout.css">
 <link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/mine/bootstrap-css-vertical-tabs.css">
+<style type="text/css">
+    .element-container-alt{
+        margin-bottom:20px;
+    }
+    .element-container-alt-header{
+        padding: 1.5rem 0px 1.5rem 4rem;
+        background-color: #4a4646;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+    }
+    .element-container-alt-header h4{
+        color:#fff;
+        text-transform: uppercase;
+        font-weight: 600;        
+    }
+    .element-container-alt-body{
+        background-color: #dedede;
+        padding:20px 40px;
+    }
+    .no-border{
+        border:none;
+    }
+    .price-table{
+        padding:0;
+        margin:0;
+    }
+    .price-table thead th{
+        padding: 0;
+        text-align: left !important;
+        font-size: 14px;
+        font-weight: 600;
+        border:none;
+        background:none;
+        padding:5px 0px 8px 0px;
+    }
+    .price-table tbody{
+        height: auto !important;
+    }
+    .price-table tr{
+        background:none;
+    }
+    .price-table tr td{
+        background: none;
+        border:none;
+        font-size: 14px;
+        font-weight: 600;
+        text-align: left !important;
+        padding:2px 0px;
+    }
+    .ptitle{
+        width: 60%;
+    }
+</style>
 <main class="main">
 	<div class="container">
 		<div class="tabbable">
@@ -16,15 +69,134 @@
 		</div>
 
 		<div class="row">
-			<div class="col-xs-12 col-sm-8 col-md-8 col-lg-9">
+			<div class="col-xs-12 col-sm-8 ">
                 <div class="element-container-alt">
                     <div class="element-container-alt-header">
-                        
+                        <h4>Delivery</h4>
                     </div>
-                    <div class="element-container-alt-body"></div>
-                </div>         
+                    <div class="element-container-alt-body">
+                        <h3>Add New Delivery Address</h3>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-4">
+                                <label class="control-label">Postcode*</label>
+                            </div>
+                            <div class="col-xs-12 col-sm-8">
+                                <input class="form-control" type="text">
+                            </div>
+                            <div class="col-xs-12 col-sm-4"></div>
+                            <div class="col-xs-12 col-sm-8">
+                                <input type="checkbox">Enter Address Manually
+                            </div>
+
+                        </div>
+                    </div>
+                </div> 
+                <div class="element-container-alt">
+                    <div class="element-container-alt-header">
+                        <h4>Billing Address</h4>
+                    </div>
+                </div>    
+                <div class="element-container-alt">
+                    <div class="element-container-alt-header">
+                        <h4>Payment Method</h4>
+                    </div>
+                </div>        
             </div>
-            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3"></div>
+            <div class="col-xs-12 col-sm-4">
+                <div class="element-container">
+                    <div class="element-container-header">
+                        <h4>Summery</h4>
+                    </div>
+                    <div class="element-container-body">
+                        <div class="row checkout-review no-border" style="padding-bottom: 0px">
+                            <div class="col-xs-6">SUB TOTAL</div>
+                            <div class="col-xs-6" style="text-align: right"><strong>&pound;38.68</strong></div>
+                            <div class="col-xs-6">VAT</div>
+                            <div class="col-xs-6" style="text-align: right"><strong>&pound;7.74</strong></div>
+                            <div class="col-xs-6">TOTAL</div>
+                            <div class="col-xs-6"><h4 class="main-price">&pound;46.42</h4></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="element-container">
+                    <div class="element-container-header">
+                        <h4>Your Basket(2)</h4>
+                    </div>
+                    <div class="element-container-body" style="padding-top: 1rem">
+                        <div class="product-detail">
+                            <div class="row">
+                                <table class="price-table">
+                                    <thead>
+                                        <tr>
+                                            <th class="ptitle"></th>
+                                            <th class="pprice">Price</th>
+                                            <th class="pvat">VAT</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="ptitle">Classic Curve Pens</td>
+                                            <td class="pprice">&pound;36.18</td>
+                                            <td class="pvat">&pound;7.24</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ptitle">File Check</td>
+                                            <td class="pprice">&pound;2.5</td>
+                                            <td class="pvat">&pound;0.50</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ptitle">Total</td>
+                                            <td class="pprice">&pound;36.68</td>
+                                            <td class="pvat">&pound;7.74</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="row" style="margin-top: 20px">
+                                <p>
+                                    Qty:25, Format:50 x 6 mm, lnk Color: Black, Pen Name: Foer, Pen Material: Plastic, Printing Process: Pad Printing, Pen Category: Cheap Pens, Colour Options : White/Lime, Printing Colors: 1/10 Pantone (spot) colors On Standard Turnaround
+                                </p>
+                            </div>
+                        </div>
+                        <div class="divider-custom"></div>
+                        <div class="product-detail">
+                            <div class="row">
+                                <table class="price-table">
+                                    <thead>
+                                        <tr>
+                                            <th class="ptitle"></th>
+                                            <th class="pprice">Price</th>
+                                            <th class="pvat">VAT</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="ptitle">Classic Curve Pens</td>
+                                            <td class="pprice">&pound;36.18</td>
+                                            <td class="pvat">&pound;7.24</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ptitle">File Check</td>
+                                            <td class="pprice">&pound;2.5</td>
+                                            <td class="pvat">&pound;0.50</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ptitle">Total</td>
+                                            <td class="pprice">&pound;36.68</td>
+                                            <td class="pvat">&pound;7.74</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="row" style="margin-top: 20px">
+                                <p>
+                                    Qty:25, Format:50 x 6 mm, lnk Color: Black, Pen Name: Foer, Pen Material: Plastic, Printing Process: Pad Printing, Pen Category: Cheap Pens, Colour Options : White/Lime, Printing Colors: 1/10 Pantone (spot) colors On Standard Turnaround
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 		</div>
 	</div>
