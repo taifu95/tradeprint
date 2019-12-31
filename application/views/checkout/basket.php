@@ -2,16 +2,109 @@
 <!-- Bootstrap & CSS form Wizard Stylesheet -->
 <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/mine/bootstrap-css-wizard.css">
 <!-- Bootstrap & CSS form Wizard Stylesheet -->
-
+<link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/mine/checkout.css">
 <main class="main">
 	<div class="container">
 		<div class="tabbable">
 		  	<ul class="nav nav-tabs wizard">
-		    	<li class="active"><a href="#i9" data-toggle="tab" aria-expanded="false">Step 01</a></li>
-		    	<li><a href="#w4" data-toggle="tab" aria-expanded="false">Step 02</a></li>
-		    	<li><a href="#stateinfo" data-toggle="tab" aria-expanded="false">Step 03</a></li>
-		    	<li><a href="#companydoc" data-toggle="tab" aria-expanded="false">Step 04</a></li>
+		    	<li class="active" id="basket" data-href="<?= base_url()?>checkout"><a href="#" data-toggle="tab" aria-expanded="false">Basket</a></li>
+		    	<li id="upload_artwork" data-href="<?= base_url()?>checkout/upload_artwork"><a href="#w4" data-toggle="tab" aria-expanded="false">Upload Artwork</a></li>
+		    	<li id="delivery_payment" data-href="<?= base_url()?>checkout/delivery_payment"><a href="#stateinfo" data-toggle="tab" aria-expanded="false">Delivery & Payment</a></li>
+		    	<li id="order_success" data-href="<?= base_url()?>checkout/order_success"><a href="#companydoc" data-toggle="tab" aria-expanded="false">Order Success</a></li>
 		  	</ul>
+		</div>
+		<div class="row">
+			<div class="col-sm-12 col-md-6 col-lg-8">
+				<div class="element-container">
+					<div class="element-container-header"><h4>Your Basket(1)</h4></div>
+					<div class="element-container-body">
+						<div class="row">
+							<div class="col-sm-12 col-md-9">
+								<h3 class="product_title">Classic Curve Pens</h3>
+								<p>
+									Qty:25, Format:50 x 6 mm, lnk Color: Black, Pen Name: Foer, Pen Material: Plastic, Printing Process: Pad Printing, Pen Category: Cheap Pens, Colour Options : White/Lime, Printing Colors: 1/10 Pantone (spot) colors On Standard Turnaround
+								</p>
+								<p>
+									<small>Artwork Service <b>File Check</b> (&pound;2.50+ VAT)</small>
+								</p>
+								<p><h4><strong>Delivery by 12/01/2020 on Standard Turnaround (13 days)*</strong></h4></p>
+							</div>
+							<div class="col-sm-12 col-md-3">
+								<div class="element-container-price">
+									<h4 class="main-price">&pound;38.68</h4>
+									<span class="small-vat">&pound;46.42 incl.VAT</span>
+								</div>
+								<div class="element-container-remove-link">
+									<a class="" href="#">Remove</a>
+								</div>
+							</div>
+							<div class="col-md-12 col-md-9" style="margin-top: 2rem">
+								<div class="row">
+									<div class="col-sm-12 col-md-4">
+										<label class="control-label" for="your_reference">Your reference</label>
+									</div>
+									<div class="col-sm-12 col-md-8">
+										<input class="form-control" name="your_reference" placeholder="(e.g. Tom's Flyers)">
+									</div>
+									<div class="col-sm-12 col-md-4">
+										<label class="control-label" for="your_po_number">Your PO Number</label>
+									</div>
+									<div class="col-sm-12 col-md-8">
+										<input class="form-control" name="your_po_number" placeholder="(e.g. PO102923)">
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3"></div>
+						</div>
+
+					</div>
+				</div>
+				<div class="alert alert-danger custom-alert">
+					<p>*When ordered by 6pm (or 11am for Same Day), based on next day courier.</p>
+				</div>
+			</div>
+			<div class="col-sm-12 col-md-6 col-lg-4">
+				<div class="row">
+					<div class="col-md-12 text-center" style="margin-top: 25px">
+						<a class="checkout-link-tag" href="#" style="font-size: 18px; text-transform: uppercase;">Continue Shopping</a>
+					</div>
+					<div class="col-md-12">
+						<div class="element-container">
+							<div class="element-container-header">
+								<h4>Summery</h4>
+							</div>
+							<div class="element-container-body">
+								<div class="row checkout-review">
+									<div class="col-xs-6">SUB TOTAL</div>
+									<div class="col-xs-6" style="text-align: right"><strong>&pound;38.68</strong></div>
+									<div class="col-xs-6">VAT</div>
+									<div class="col-xs-6" style="text-align: right"><strong>&pound;7.74</strong></div>
+									<div class="col-xs-6">TOTAL</div>
+									<div class="col-xs-6"><h4 class="main-price">&pound;46.42</h4></div>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<button class="btn btn-danger btn-danger-full btn-checkout">CHECKOUT</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="discount-code-container">
+							<div class="d-inline-block" >DISCOUNT CODE</div>
+							<i class="fa fa-plus-circle float-right" id="plus_coupon_code"></i>
+							<div class="input-group mb-3" id="input-coupon-code">
+								<input type="text" class="form-control" placeholder="" style="margin-bottom:0 !important">
+								<div class="input-group-btn" style="vertical-align: top !important">
+									<button class="btn btn-primary" type="button">APPLY</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
 		</div>
 	</div>
 
@@ -226,7 +319,15 @@
 <script type="text/javascript" src="<?php echo base_url()?>assets/front/js/owl.carousel.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url()?>assets/front/js/theme.js"></script>
 <script src="<?php echo base_url()?>assets/mine/search.js"></script>
-<script type="text/javascript" src="<?= base_url()?>assets/mine/bootstrap-css-wizard.js"></script>	
+<script type="text/javascript" src="<?= base_url()?>assets/mine/bootstrap-css-wizard.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#plus_coupon_code").on("click", function(){
+			$(this).css("display","none");
+			$("#input-coupon-code").css("display","table");
+		})
+	})
+</script>	
 
 
 
