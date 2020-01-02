@@ -56,6 +56,9 @@
     .ptitle{
         width: 60%;
     }
+    .custom-billing-address-form{
+        display: none;
+    }
 </style>
 <main class="main">
 	<div class="container">
@@ -76,7 +79,7 @@
                     </div>
                     <div class="element-container-alt-body">
                         <h3>Add New Delivery Address</h3>
-                        <div class="row">
+                        <div class="row" style="margin-top: 10px">
                             <div class="col-xs-12 col-sm-4">
                                 <label class="control-label">Postcode*</label>
                             </div>
@@ -84,9 +87,91 @@
                                 <input class="form-control" type="text">
                             </div>
                             <div class="col-xs-12 col-sm-4"></div>
-                            <div class="col-xs-12 col-sm-8">
-                                <input type="checkbox">Enter Address Manually
+                            <div class="col-xs-12 col-sm-8" style="margin-top: 10px">
+                                <input type="checkbox" id="address_manually">Enter Address Manually
                             </div>
+                            <form class="custom-billing-address-form">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-4">
+                                        <label class="control-label">First Name*</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-8">
+                                        <input class="form-control" name="firstname" >
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-4">
+                                        <label class="control-label">Last Name*</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-8">
+                                        <input class="form-control" name="lastname" >
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-4">
+                                        <label class="control-label">Company Name</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-8">
+                                        <input class="form-control" name="company_name" >
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-4">
+                                        <label class="control-label">Address*</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-8">
+                                        <input class="form-control" name="address1" >
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-4"></div>
+                                    <div class="col-xs-12 col-sm-8">
+                                        <input class="form-control" name="address2" >
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-4">
+                                        <label class="control-label">Town*</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-8">
+                                        <input class="form-control" name="town" >
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-4">
+                                        <label class="control-label">Country*</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-8">
+                                        <input class="form-control" name="country" >
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-4">
+                                        <label class="control-label">Delivery Contact Number*</label>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-8">
+                                        <input class="form-control" name="contact_number" >
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-4">
+                                    </div>
+                                    <div class="col-xs-12 col-sm-8">
+                                        <input type="checkbox"  name="save_as_billing_address" >Save as Billing Address
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-4">
+                                    </div>
+                                    <div class="col-xs-12 col-sm-8">
+                                        <input type="checkbox"  name="save_as_default_address" >Save as Default Address
+                                    </div>
+                                </div>
+                                <div class="row text-center" style="margin-top: 10px">
+                                    <button class="btn btn-danger" style="width: 140px" type="submit">ADD</button>
+                                </div>
+
+                            </form>
 
                         </div>
                     </div>
@@ -412,6 +497,14 @@
 <script type="text/javascript" src="<?= base_url()?>assets/mine/bootstrap-css-wizard.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-		
+		$("#address_manually").on("change",function(){
+            if($(this).prop("checked")){
+                $(".custom-billing-address-form").show();
+            }
+            else{
+                $(".custom-billing-address-form").hide();
+
+            }
+        })
 	})
 </script>	
