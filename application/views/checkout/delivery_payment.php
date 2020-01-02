@@ -170,9 +170,7 @@
                                 <div class="row text-center" style="margin-top: 10px">
                                     <button class="btn btn-danger" style="width: 140px" type="submit">ADD</button>
                                 </div>
-
                             </form>
-
                         </div>
                     </div>
                 </div> 
