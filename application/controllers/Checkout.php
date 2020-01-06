@@ -47,4 +47,13 @@ class Checkout extends CI_Controller {
         $this->load->view("include/header", $data);
         $this->load->view("checkout/delivery_payment.php",$data);
     }
+    function order_success(){
+        $data = array();
+        $data['category'] = $this->trade_m->get_category();
+        $data['menu'] = $this->trade_m->get_cat_menu();
+        $data['color'] = $this->trade_m->get_color();
+
+        $this->load->view("include/header", $data);
+        $this->load->view("checkout/order_success.php",$data);
+    }
 }
