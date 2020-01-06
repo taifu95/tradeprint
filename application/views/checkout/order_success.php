@@ -25,6 +25,10 @@
         font-size:18px;
         margin-bottom: 5px;
     }
+    #customer-detail h6{
+        color:#2366A0;
+        margin-bottom: 2px;
+    }
 </style>
 <main class="main">
 	<div class="container">

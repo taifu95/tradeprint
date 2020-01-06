@@ -4,62 +4,6 @@
 <!-- Bootstrap & CSS form Wizard Stylesheet -->
 <link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/mine/checkout.css">
 <link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/mine/bootstrap-css-vertical-tabs.css">
-<style type="text/css">
-    .element-container-alt{
-        margin-bottom:20px;
-    }
-    .element-container-alt-header{
-        padding: 1.5rem 0px 1.5rem 4rem;
-        background-color: #4a4646;
-        border-top-left-radius: 4px;
-        border-top-right-radius: 4px;
-    }
-    .element-container-alt-header h4{
-        color:#fff;
-        text-transform: uppercase;
-        font-weight: 600;        
-    }
-    .element-container-alt-body{
-        background-color: #dedede;
-        padding:20px 40px;
-    }
-    .no-border{
-        border:none;
-    }
-    .price-table{
-        padding:0;
-        margin:0;
-    }
-    .price-table thead th{
-        padding: 0;
-        text-align: left !important;
-        font-size: 14px;
-        font-weight: 600;
-        border:none;
-        background:none;
-        padding:5px 0px 8px 0px;
-    }
-    .price-table tbody{
-        height: auto !important;
-    }
-    .price-table tr{
-        background:none;
-    }
-    .price-table tr td{
-        background: none;
-        border:none;
-        font-size: 14px;
-        font-weight: 600;
-        text-align: left !important;
-        padding:2px 0px;
-    }
-    .ptitle{
-        width: 60%;
-    }
-    .custom-billing-address-form{
-        display: none;
-    }
-</style>
 <main class="main">
 	<div class="container">
 		<div class="tabbable">
